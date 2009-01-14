@@ -1,15 +1,16 @@
 Summary:	iPod Convenience: A suite of scripts for 7th Generation iPods
+Summary(pl.UTF-8):	iPod Convenience - zestaw skryptów do iPodów 7. generacji
 Name:		ipod-convenience
 Version:	0.5
 Release:	0.2
 License:	GPL v3
-Group:		Applications
+Group:		Applications/Communication
 Source0:	ipod.tar.bz2
 # Source0-md5:	d90ac85aa0a57ed3cdfc78b9c062c112
 URL:		https://launchpad.net/ipod-convenience
 BuildRequires:	sed >= 4.0
-Requires:	sshfs-fuse
 Requires:	ping
+Requires:	sshfs-fuse
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -19,6 +20,13 @@ be synced via USB in Linux. Instead, the devices need to be synced
 over a wireless connection. In order for the devices to work in the
 existing applications, several things need to be taken into account
 that aren't normally a concern with earlier generations.
+
+%description -l pl.UTF-8
+Rodzina urządzeń iPod firmy Apple 7. generacji (iPod Touch i iPhone)
+nie może być już synchronizowana pod Linuksem po USB. Zamiast tego
+urządzenia te muszą być synchronizowane po połączeniu bezprzewodowym.
+Aby działały z istniejącymi aplikacjami, trzeba wziąć pod uwagę cechy,
+które nie miały znaczenia we wcześniejszych generacjach.
 
 %prep
 %setup -q -n ipod
