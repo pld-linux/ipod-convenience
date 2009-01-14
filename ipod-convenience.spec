@@ -1,14 +1,15 @@
 Summary:	iPod Convenience: A suite of scripts for 7th Generation iPods
 Name:		ipod-convenience
 Version:	0.5
-Release:	0.1
+Release:	0.2
 License:	GPL v3
 Group:		Applications
 Source0:	ipod.tar.bz2
-# Source0-md5:	cf62f438b820ef0da4d7f2f3ed49a5a8
+# Source0-md5:	d90ac85aa0a57ed3cdfc78b9c062c112
 URL:		https://launchpad.net/ipod-convenience
 BuildRequires:	sed >= 4.0
 Requires:	sshfs-fuse
+Requires:	ping
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
