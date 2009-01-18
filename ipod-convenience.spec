@@ -2,9 +2,11 @@ Summary:	iPod Convenience: A suite of scripts for 7th Generation iPods
 Summary(pl.UTF-8):	iPod Convenience - zestaw skryptów do iPodów 7. generacji
 Name:		ipod-convenience
 Version:	0.5
-Release:	0.2
+Release:	0.3
 License:	GPL v3
 Group:		Applications/Communication
+# bzr get lp:~glen666/ipod-convenience/pld-patches ipod
+# tar -cjf ipod.tar.bz2 --exclude=.bzr ipod
 Source0:	ipod.tar.bz2
 # Source0-md5:	d90ac85aa0a57ed3cdfc78b9c062c112
 URL:		https://launchpad.net/ipod-convenience
@@ -30,7 +32,7 @@ które nie miały znaczenia we wcześniejszych generacjach.
 
 %prep
 %setup -q -n ipod
-find -type f | xargs grep -l /etc/default/ipod-convenience | xargs sed -i -e 's,/etc/default/ipod-convenience,/etc/sysconfig/ipod-convenience,'
+find -type f | xargs grep -l /etc/default/ipod-convenience | xargs %{__sed} -i -e 's,/etc/default/ipod-convenience,/etc/sysconfig/ipod-convenience,'
 
 %install
 rm -rf $RPM_BUILD_ROOT
