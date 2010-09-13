@@ -4,7 +4,7 @@ Name:		ipod-convenience
 Version:	0.9
 Release:	1
 License:	GPL v3
-Group:		Applications/Communication
+Group:		Applications/Communications
 # bzr get lp:~glen666/ipod-convenience/pld-patches ipod-convenience.tar.bz2
 # tar -cjf ipod-convenience.tar.bz2 --exclude=.bzr ipod-convenience.tar.bz2
 Source0:	%{name}.tar.bz2
